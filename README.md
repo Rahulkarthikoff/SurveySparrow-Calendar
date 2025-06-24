@@ -40,10 +40,10 @@ A modern, responsive calendar web app built with React and Material UI, featurin
 ![Calendar Desktop](images/calendar-img.png)
 
 ### Add Event
-![Add Event](images/add-event.png)
+![Add Event](images/add_event.png)
 
 ### View Event
-![View Event](images/viewing-event.png)
+![View Event](images/viewing-events.png)
 
 
 
