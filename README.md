@@ -45,8 +45,7 @@ A modern, responsive calendar web app built with React and Material UI, featurin
 ### View Event
 ![View Event](images/viewing-event.png)
 
-### Delete Event
-![Delete Event](images/delete-event.png)
+
 
 
 
