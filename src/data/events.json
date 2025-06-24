@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Team Meeting",
+    "date": "2025-06-23",
+    "time": "10:00 AM",
+    "duration": "1h"
+  },
+  {
+    "title": "Doctor Appointment",
+    "date": "2025-06-23",
+    "time": "3:00 PM",
+    "duration": "30m"
+  },
+  {
+    "title": "Yoga Class",
+    "date": "2025-06-24",
+    "time": "6:00 AM",
+    "duration": "1h"
+  }
+]

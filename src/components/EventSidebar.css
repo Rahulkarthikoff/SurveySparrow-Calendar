@@ -1,0 +1,162 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 320px;
+  height: 95vh;
+  background: #fafafa;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+  transform: translateX(100%);
+  padding: 20px;
+  z-index: 999;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar.show {
+  transform: translateX(0);
+}
+
+.app-container.shrink .calendar-wrapper {
+  margin-right: 320px;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border: none;
+  background: transparent;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.event-list {
+  margin: 16px 0;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+}
+
+.event-list li {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: box-shadow 0.2s;
+  box-shadow: 0 1px 2px rgba(60,60,60,0.03);
+}
+
+.event-list li:last-child {
+  margin-bottom: 0;
+}
+
+
+@media (max-width: 1280px) {
+  .sidebar {
+    width: 90vw;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: auto;
+    min-height: 60vh;
+    max-height: 90vh;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 12px 4vw 24px 4vw;
+    position: fixed;
+    z-index: 1200;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+  }
+  .sidebar.show {
+    transform: translateY(0);
+  }
+  .event-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 6px;
+    font-size: 15px;
+    gap: 6px;
+  }
+  .event-list li > div:first-child {
+    width: 100%;
+    margin-bottom: 4px;
+    order: 1;
+  }
+  .event-list li > div:last-child {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    order: 2;
+  }
+  .close-button {
+    left: auto;
+    right: 10px;
+    top: 10px;
+  }
+}
+
+
+/* Add this to your main CSS file for mobile improvements */
+
+@media (max-width: 480px) {
+  .navigator {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 8px 0;
+  }
+  .nav-button {
+    font-size: 13px;
+    padding: 6px 8px;
+    min-width: 0;
+    border-radius: 5px;
+    margin: 0 2px;
+    background: #e3f2fd;
+    color: #1976d2;
+    border: 1px solid #90caf9;
+    transition: background 0.2s;
+  }
+  .nav-title {
+    font-size: 16px;
+    margin: 0 4px;
+    flex: 1 1 100%;
+    text-align: center;
+    padding: 4px 0;
+  }
+  .calendar-grid {
+    grid-template-columns: repeat(7, 1fr);
+    font-size: 12px;
+    gap: 2px;
+    padding: 0 2px;
+  }
+  .calendar-header {
+    font-size: 12px;
+    padding: 4px 0;
+  }
+  .calendar-cell {
+    min-height: 32px;
+    padding: 2px 2px 2px 4px;
+    font-size: 12px;
+    border-radius: 4px;
+  }
+  .calendar-date {
+    font-size: 13px;
+  }
+  .calendar-event-title {
+    font-size: 11px;
+    padding: 1px 3px;
+  }
+}
+
+
