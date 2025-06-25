@@ -156,6 +156,40 @@
 }
 
 
+.calendar-wrapper {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(60,60,60,0.10);
+  padding: 24px 18px 32px 18px;
+  margin: 24px auto;
+  max-width: 900px;
+}
+
+.calendar-cell {
+  background: #f8fafc;
+  border-radius: 10px;
+  border: 1.5px solid #e0e0e0;
+  box-shadow: 0 1px 4px rgba(60,60,60,0.06);
+  transition: box-shadow 0.2s, border 0.2s;
+}
+
+.calendar-event-title--completed {
+  background: #43a047 !important; /* Green */
+  color: #fff !important;
+}
+
+
+.calendar-cell:hover {
+  box-shadow: 0 4px 12px rgba(60,60,60,0.13);
+  border-color: #90caf9;
+}
+
+.calendar-cell:hover .calendar-event-title {
+  background: #bbdefb;
+  color: #0d47a1;
+}
+
+
 
 @media (max-width: 768px) {
   .calendar-grid {

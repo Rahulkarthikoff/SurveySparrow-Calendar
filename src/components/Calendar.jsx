@@ -42,7 +42,15 @@ export default function Calendar({ month, events, onDateClick }) {
           {hasEvent && (
             <div className="calendar-events">
               {dayEvents.slice(0, maxVisible).map((e, i) => (
-                <div key={i} className="calendar-event-title">{e.title}</div>
+                <div
+                  key={i}
+                  className={
+                    "calendar-event-title" +
+                    (e.completed ? " calendar-event-title--completed" : "")
+                  }
+                >
+                  {e.title}
+                </div>
               ))}
               {dayEvents.length > maxVisible && (
                 <div className="calendar-event-more">

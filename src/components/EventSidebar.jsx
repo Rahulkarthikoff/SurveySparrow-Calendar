@@ -9,6 +9,7 @@ import { StaticTimePicker } from '@mui/x-date-pickers/StaticTimePicker';
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import dayjs from "dayjs";
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
 export default function EventSidebar({ visible, close, date, addEvent, events, updateEvent }) {
   const [title, setTitle] = useState("");
@@ -70,8 +71,12 @@ export default function EventSidebar({ visible, close, date, addEvent, events, u
         {events.length === 0 && <li>No events for this date.</li>}
         {events.map((e, i) => (
           <li key={i} style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-            <div>
-              <strong>{e.title}</strong> <br />
+            <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+              <strong>{e.title}</strong>
+              {e.completed && (
+                <CheckCircleIcon style={{ color: "#43a047", fontSize: 20, marginLeft: 4 }} />
+              )}
+              <br />
               {e.time} ({e.duration})
             </div>
             <div>

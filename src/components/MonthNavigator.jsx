@@ -1,4 +1,5 @@
 import React from "react";
+import "./MonthNavigator.css";
 
 export default function MonthNavigator({ month, setMonth }) {
   const nextMonth = () => setMonth(month.add(1, "month"));

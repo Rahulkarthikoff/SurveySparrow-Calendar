@@ -28,10 +28,11 @@ export default function App() {
       date: dayjs().date(20).format("YYYY-MM-DD"),
     },
     {
-      title: "Lunch with Alex",
+      title: "Lunch with Customers",
       time: "01:00 PM - 02:00 PM",
       duration: "60 mins",
       date: dayjs().date(22).format("YYYY-MM-DD"),
+      completed: true,
     },
     {
       title: "Yoga Class",
@@ -81,7 +82,7 @@ export default function App() {
     <div className={`app-container ${sidebarVisible ? "shrink" : ""}`}>
       <div className="main-layout">
         <div className="calendar-wrapper">
-          <h1 className="calendar-title">📅 My Smart Calendar</h1>
+          <h1 className="calendar-title"> Sparrow's Smart Calendar</h1>
           <MonthNavigator month={currentMonth} setMonth={setCurrentMonth} />
           <Calendar
             events={events}

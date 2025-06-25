@@ -1,0 +1,22 @@
+.nav-button {
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 7px 14px;
+  margin: 0 4px;
+  font-weight: 500;
+  font-size: 15px;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+  transition: background 0.2s;
+}
+.nav-button:hover {
+  background: #1565c0;
+}
+.nav-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #222;
+  margin: 0 12px;
+  letter-spacing: 0.02em;
+}
